@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "NituDownloader",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "小甜甜的昵图网下载工具",
+    "description": "The description of the application"
+  }
+}

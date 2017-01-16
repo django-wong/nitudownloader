@@ -1,0 +1,57 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "24": "images/icon-24.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "http://down.nipic.com/*",
+    "https://down.nipic.com/*",
+    "downloads",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://down.nipic.com/download*",
+        "https://down.nipic.com/download*"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "24": "images/icon-24.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "default_title": "NituDownloader"
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://down.nipic.com/download*",
+      "https://down.nipic.com/download*"
+    ]
+  },
+  "web_accessible_resources": [
+    "scripts/inject.js"
+  ]
+}
