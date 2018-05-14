@@ -34,6 +34,14 @@
       ],
       "run_at": "document_end",
       "all_frames": false
+    },
+    {
+      "matches": [
+        "https://noviio.com/test"
+      ],
+      "js": [
+        "scripts/inject.js"
+      ]
     }
   ],
   "page_action": {
